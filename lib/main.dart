@@ -1,9 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:tak_blog/colors.dart';
-import 'package:tak_blog/gen/assets.gen.dart';
 import 'package:tak_blog/view/splash_screen.dart';
 
 void main() {
@@ -21,8 +21,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    var textTeme = Theme.of(context).textTheme;
+
     return MaterialApp(
       title: 'Localizations Sample App',
+
+// for right to left
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
@@ -31,8 +35,35 @@ class MyApp extends StatelessWidget {
       supportedLocales: const [
         Locale('fa', ''), // farsi
       ],
+
+//! theme date
       theme: ThemeData(
-        fontFamily: 'Vazer',
+        //!  input decoration
+        inputDecorationTheme: InputDecorationTheme(
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(16),
+              borderSide: const BorderSide(width: 2),
+            ),
+            filled: true,
+            fillColor: Color.fromARGB(255, 255, 255, 255)),
+
+        // ! botton style
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ButtonStyle(
+              textStyle: MaterialStateProperty.resolveWith((states) {
+            if (states.contains(MaterialState.pressed)) {
+              return textTeme.headline1;
+            }
+            return textTeme.headline6;
+          }), backgroundColor: MaterialStateProperty.resolveWith((states) {
+            if (states.contains(MaterialState.pressed)) {
+              return AllColors.colorTitle;
+            }
+            return AllColors.colorPrimery;
+          })),
+        ),
+        // fontFamily: 'Vazer',
+        //!  text style
         textTheme: const TextTheme(
           headline1: TextStyle(
               fontFamily: 'Vazer',

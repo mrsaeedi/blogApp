@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:tak_blog/Strings.dart';
 import 'package:tak_blog/colors.dart';
 import 'package:tak_blog/gen/assets.gen.dart';
-import 'package:tak_blog/models/fake_data.dart';
 import 'package:tak_blog/my_component.dart';
+// import 'package:tak_blog/models/fake_data.dart';
 
-class profileScreen extends StatelessWidget {
-  const profileScreen({
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({
     Key? key,
     required this.size,
     required this.textTeme,
@@ -62,21 +62,21 @@ class profileScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            tehcDivider(size: size),
+            TehcDivider(size: size),
             InkWell(
               splashColor: AllColors.colorPrimery,
               onTap: () {},
               child: const SizedBox(
                   height: 40, child: Center(child: Text(Strings.myFavBlog))),
             ),
-            tehcDivider(size: size),
+            TehcDivider(size: size),
             InkWell(
               splashColor: AllColors.colorPrimery,
               onTap: () {},
               child: const SizedBox(
                   height: 40, child: Center(child: Text(Strings.myFavPodcast))),
             ),
-            tehcDivider(size: size),
+            TehcDivider(size: size),
             InkWell(
               splashColor: AllColors.colorPrimery,
               onTap: () {},

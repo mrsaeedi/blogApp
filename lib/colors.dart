@@ -16,6 +16,7 @@ class AllColors {
   static const Color colorSubmitPodcast = (Color.fromARGB(255, 246, 246, 246));
   static const Color colorSubtext = (Color.fromARGB(255, 197, 197, 197));
   static const Color colorDivider = (Color.fromARGB(255, 99, 99, 99));
+  static const Color colorHintText = (Color.fromARGB(255, 145, 145, 145));
 }
 
 class GradiantColors {
@@ -24,20 +25,20 @@ class GradiantColors {
     Color.fromARGB(0, 255, 255, 255)
   ];
   static const List<Color> bottonNav = [
-    const Color.fromARGB(255, 25, 0, 94),
-    const Color.fromARGB(255, 67, 4, 87)
+    Color.fromARGB(255, 25, 0, 94),
+    Color.fromARGB(255, 67, 4, 87)
   ];
   static const List<Color> tags = [
-    const Color.fromARGB(255, 25, 0, 94),
-    const Color.fromARGB(255, 67, 4, 87)
+    Color.fromARGB(255, 25, 0, 94),
+    Color.fromARGB(255, 67, 4, 87)
   ];
   static const List<Color> postGradiant = [
     Color.fromARGB(0, 22, 22, 22),
     Color.fromARGB(255, 0, 0, 0)
   ];
   static const List<Color> homePostCoverGradiant = [
-    const Color.fromARGB(0, 0, 0, 0),
-    const Color.fromARGB(190, 72, 20, 88),
-    const Color.fromARGB(255, 28, 20, 81)
+    Color.fromARGB(0, 0, 0, 0),
+    Color.fromARGB(190, 72, 20, 88),
+    Color.fromARGB(255, 28, 20, 81)
   ];
 }

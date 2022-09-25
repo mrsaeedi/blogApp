@@ -4,8 +4,8 @@ import 'package:tak_blog/colors.dart';
 import 'package:tak_blog/gen/assets.gen.dart';
 import 'package:tak_blog/models/fake_data.dart';
 
-class homeScreen extends StatelessWidget {
-  const homeScreen({
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({
     Key? key,
     required this.size,
     required this.textTeme,
@@ -25,13 +25,13 @@ class homeScreen extends StatelessWidget {
         child: Column(
           children: [
             // ! banner
-            homePagePoster(size: size, textTeme: textTeme),
+            HomePagePoster(size: size, textTeme: textTeme),
             const SizedBox(
               height: 12,
             ),
             //!  hashTag listView
 
-            homePageTagList(bodyMargin: bodyMargin, textTeme: textTeme),
+            HomePageTagList(bodyMargin: bodyMargin, textTeme: textTeme),
 
             const SizedBox(
               height: 18,
@@ -39,7 +39,7 @@ class homeScreen extends StatelessWidget {
 
             //! see more
 
-            seeMore(bodyMargin: bodyMargin, textTeme: textTeme),
+            SeeMore(bodyMargin: bodyMargin, textTeme: textTeme),
             const SizedBox(
               height: 12,
             ),
@@ -48,13 +48,13 @@ class homeScreen extends StatelessWidget {
             homePageBlogList(
                 bodyMargin: bodyMargin, size: size, textTeme: textTeme),
 
-            seeMoreP(bodyMargin: bodyMargin, textTeme: textTeme),
+            SeeMoreP(bodyMargin: bodyMargin, textTeme: textTeme),
             const SizedBox(
               height: 12,
             ),
             //! podcast list view
 
-            homePagePodcastList(
+            HomePagePodcastList(
                 bodyMargin: bodyMargin, size: size, textTeme: textTeme),
 
             SizedBox(
@@ -69,8 +69,8 @@ class homeScreen extends StatelessWidget {
 
 }
 
-class seeMoreP extends StatelessWidget {
-  const seeMoreP({
+class SeeMoreP extends StatelessWidget {
+  const SeeMoreP({
     Key? key,
     required this.bodyMargin,
     required this.textTeme,
@@ -104,8 +104,8 @@ class seeMoreP extends StatelessWidget {
 }
 
 // ! podcast list
-class homePagePodcastList extends StatelessWidget {
-  const homePagePodcastList({
+class HomePagePodcastList extends StatelessWidget {
+  const HomePagePodcastList({
     Key? key,
     required this.bodyMargin,
     required this.size,
@@ -258,8 +258,8 @@ class homePageBlogList extends StatelessWidget {
 }
 
 // ! see more posts
-class seeMore extends StatelessWidget {
-  const seeMore({
+class SeeMore extends StatelessWidget {
+  const SeeMore({
     Key? key,
     required this.bodyMargin,
     required this.textTeme,
@@ -293,8 +293,8 @@ class seeMore extends StatelessWidget {
 }
 
 // ! tag list
-class homePageTagList extends StatelessWidget {
-  const homePageTagList({
+class HomePageTagList extends StatelessWidget {
+  const HomePageTagList({
     Key? key,
     required this.bodyMargin,
     required this.textTeme,
@@ -350,8 +350,8 @@ class homePageTagList extends StatelessWidget {
 }
 
 // ! banner
-class homePagePoster extends StatelessWidget {
-  const homePagePoster({
+class HomePagePoster extends StatelessWidget {
+  const HomePagePoster({
     Key? key,
     required this.size,
     required this.textTeme,

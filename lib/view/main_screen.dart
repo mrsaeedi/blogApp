@@ -1,14 +1,15 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:tak_blog/Strings.dart';
+// import 'package:flutter/cupertino.dart';
+// import 'package:flutter_native_splash/flutter_native_splash.dart';
+// import 'package:flutter_spinkit/flutter_spinkit.dart';
+// import 'package:tak_blog/Strings.dart';
+// import 'package:tak_blog/gen/fonts.gen.dart';
+// import 'package:tak_blog/models/fake_data.dart';
 import 'package:tak_blog/gen/assets.gen.dart';
-import 'package:tak_blog/gen/fonts.gen.dart';
-import 'package:tak_blog/models/fake_data.dart';
+import 'package:flutter/material.dart';
 import 'package:tak_blog/view/homeScreen.dart';
 import 'package:tak_blog/view/profileScreen.dart';
 import '../colors.dart';
+import 'package:tak_blog/view/register_intro.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -26,8 +27,8 @@ class _MainScreenState extends State<MainScreen> {
     var bodyMargin = size.width / 12;
 
     List<Widget> techMainScreenPages = [
-      homeScreen(size: size, textTeme: textTeme, bodyMargin: bodyMargin),
-      profileScreen(size: size, textTeme: textTeme, bodyMargin: bodyMargin)
+      HomeScreen(size: size, textTeme: textTeme, bodyMargin: bodyMargin),
+      ProfileScreen(size: size, textTeme: textTeme, bodyMargin: bodyMargin)
     ];
     // contants
     return SafeArea(
@@ -37,7 +38,7 @@ class _MainScreenState extends State<MainScreen> {
         automaticallyImplyLeading: false,
         backgroundColor: AllColors.colorScaffold,
         elevation: 0,
-        shadowColor: Color.fromARGB(127, 197, 197, 197),
+        shadowColor: const Color.fromARGB(127, 197, 197, 197),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -59,12 +60,20 @@ class _MainScreenState extends State<MainScreen> {
 // ! body
       body: Stack(
         children: [
-          Center(
-            child: Positioned.fill(child: techMainScreenPages[selectedEndex]),
-          ),
+          Positioned.fill(
+              child: IndexedStack(
+            index: selectedEndex,
+            children: [
+              RegisterIntro(),
+              HomeScreen(
+                  size: size, textTeme: textTeme, bodyMargin: bodyMargin),
+              ProfileScreen(
+                  size: size, textTeme: textTeme, bodyMargin: bodyMargin)
+            ],
+          )),
           // profileScreen(size: size, textTeme: textTeme, bodyMargin: bodyMargin),
 //!  botton navigation bar
-          bottonNav(
+          BottonNav(
             size: size,
             bodyMargin: bodyMargin,
             changeScreen: (int value) {
@@ -80,8 +89,8 @@ class _MainScreenState extends State<MainScreen> {
 }
 
 // ! botton vav widget
-class bottonNav extends StatelessWidget {
-  const bottonNav({
+class BottonNav extends StatelessWidget {
+  const BottonNav({
     Key? key,
     required this.size,
     required this.bodyMargin,

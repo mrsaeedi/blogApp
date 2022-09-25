@@ -1,9 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tak_blog/colors.dart';
 
-class tehcDivider extends StatelessWidget {
-  const tehcDivider({
+class TehcDivider extends StatelessWidget {
+  const TehcDivider({
     Key? key,
     required this.size,
   }) : super(key: key);

@@ -39,6 +39,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_native_splash: ^2.2.9
+  flutter_svg: ^1.1.5
 
 
 
@@ -58,14 +59,17 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
-flutter:
+# pubspec.yaml
+flutter_gen:
+  integrations:
+    flutter_svg: true
 
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
+flutter:
+ 
+
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
+ 
   assets:
     - assets/images/
     - assets/icons/

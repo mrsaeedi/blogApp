@@ -8,4 +8,7 @@ class Strings {
   static const String myFavBlog = 'مقالات مورد علاقه من';
   static const String myFavPodcast = 'پادکست های مورد علاقه من';
   static const String myFavTexs = 'خروج از حساب کاربری ';
+  static const String welcomText = """به تکبلاگ خوش اومدی :) 
+برای ارسال مطالب و پادکست باید اول ثبتناام کنی.""";
+  static const String insertYourEmail = 'ایمیلتو وارد کن';
 }
