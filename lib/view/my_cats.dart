@@ -1,14 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:tak_blog/Strings.dart';
-import 'package:tak_blog/colors.dart';
+import 'package:tak_blog/components/Strings.dart';
+import 'package:tak_blog/components/my_component.dart';
+
 import 'package:tak_blog/gen/assets.gen.dart';
-import 'package:tak_blog/main.dart';
-import 'package:form_validator/form_validator.dart';
-import 'package:tak_blog/models/data_models.dart';
+
 import 'package:tak_blog/models/fake_data.dart';
-import 'package:tak_blog/my_component.dart';
 
 class MyCats extends StatefulWidget {
   @override

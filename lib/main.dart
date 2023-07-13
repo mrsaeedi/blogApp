@@ -1,10 +1,9 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:tak_blog/colors.dart';
-import 'package:tak_blog/view/splash_screen.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:tak_blog/components/colors.dart';
+import 'package:tak_blog/view/main_screen/main_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,19 +22,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     var textTeme = Theme.of(context).textTheme;
 
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Localizations Sample App',
 
-// for right to left
-      localizationsDelegates: const [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: const [
-        Locale('fa', ''), // farsi
-      ],
-
+      locale: const Locale('fa'),
 //! theme date
       theme: ThemeData(
         //!  input decoration
@@ -108,7 +98,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const SplachScreen(),
+      home: MainScreen(),
     );
   }
 }

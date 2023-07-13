@@ -9,6 +9,9 @@ Map homePagePosterMap = {
   'date': 'یه روز پیش'
 };
 
+// late List<HashTag> myCats;
+List<HashTag> selectedCats = [];
+
 List<HashTag> tagList = [
   HashTag(title: 'جاوا'),
   HashTag(title: 'کاتلین'),

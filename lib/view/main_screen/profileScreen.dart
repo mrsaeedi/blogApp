@@ -1,10 +1,10 @@
 // import 'dart:js_util';
 
 import 'package:flutter/material.dart';
-import 'package:tak_blog/Strings.dart';
-import 'package:tak_blog/colors.dart';
+import 'package:tak_blog/components/Strings.dart';
+import 'package:tak_blog/components/colors.dart';
+import 'package:tak_blog/components/my_component.dart';
 import 'package:tak_blog/gen/assets.gen.dart';
-import 'package:tak_blog/my_component.dart';
 // import 'package:tak_blog/models/fake_data.dart';
 
 class ProfileScreen extends StatelessWidget {

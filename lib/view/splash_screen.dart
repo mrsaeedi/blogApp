@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:tak_blog/components/colors.dart';
 import 'package:tak_blog/gen/assets.gen.dart';
-import 'package:tak_blog/gen/fonts.gen.dart';
-import 'package:tak_blog/view/main_screen.dart';
-import '../colors.dart';
+
+import 'main_screen/main_screen.dart';
 
 class SplachScreen extends StatefulWidget {
   const SplachScreen({super.key});

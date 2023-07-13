@@ -40,7 +40,14 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_native_splash: ^2.2.9
   flutter_svg: ^1.1.5
-
+  validators: ^3.0.0
+  form_validator: ">=0.1.1 <2.0.0"
+  get: ^4.6.5
+  share_plus: ^6.3.2
+  url_launcher: ^6.1.10
+  dio: ^5.1.1
+  cached_network_image: ^3.2.3
+  flutter_widget_from_html: ^0.9.1
 
 
 dev_dependencies:
